@@ -1,8 +1,8 @@
 
 document.getElementsByClassName("fa")[4].addEventListener(
-    "click",function(){
+    "click", function () {
         document.getElementsByClassName("links")[0].classList.toggle
-        ("showlinks")
+            ("showlinks")
     })
 
 
@@ -10,8 +10,7 @@ if (document.getElementById("slider--text")) {
 
     let slides = [
         "<h2>Amazing arts that will amaze your mind.<small>Home of Arts</small></h2>",
-        "<h2>Greatest art work by an artist</h2>",
-        "<h2>Our team of experts is dedicated to curating a collection of high-quality pieces that will bring beauty and inspiration to your life.</h2>"
+        "<h2>Greatest art work by an artist</h2>"
 
 
     ];
@@ -28,3 +27,4 @@ if (document.getElementById("slider--text")) {
     slider(); // Start slider immediately
     setInterval(slider, 4000); // Slide every 4 seconds
 }
+

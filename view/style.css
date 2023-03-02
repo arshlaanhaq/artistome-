@@ -33,7 +33,7 @@
 .search a{
     padding-top: 10px;
     padding-left: 10px;
-    font-size: 20px;
+    font-size: 22px;
     color: white;
 }
 .search input {
@@ -55,7 +55,7 @@
 .icons .fa {
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     padding: 0 10px;
     transition: 0.6s;
 }
@@ -201,6 +201,42 @@
     height: 35vh;
 }
 
+
+/* line section
+ */
+
+.slide-txt{
+        /* align-items: center; */
+        display: flex;
+        justify-content: center;
+        font-size: 12px;
+}
+.fade-in {
+    animation: move 4s infinite;
+}
+
+@keyframes move {
+    0% {
+        opacity: 0;
+        transform: rotate3d(2,  0, 48deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: rotate3d( 0, 0, 24deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: rotate3d( 0, 0, 24deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate3d( -2, 0, 48deg);
+    }
+}
+
 /* footer section*/
 
 
@@ -314,5 +350,9 @@ a {
         padding: 0px 3px;
         width: 168px;
       
+    }
+    .icons .fa{
+        font-size: 23px;
+        padding-top: 9px;
     }
 }
