@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu:wght@300;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Outfit;
+    color: rgb(65, 65, 136);
+    border: 1px solid red;
+}
+
+.header {
+    background-color: rgb(29, 41, 47);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    padding: 0 25px;
+    height: 80px;
+}
+
+.logo {
+    height: 40px;
+}
+
+.search input {
+    height: 35px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.icons {
+    text-align: right;
+}
+
+.icons .fa {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 0 10px;
+    transition: 0.6s;
+}
+
+.fa:hover {
+    color: #f46d13;
+    font-size: larger;
+}
+
+.links {
+    background-color: rgb(29, 41, 47);
+    height: 0;
+    transition: 0.6s;
+}
+
+.links a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    padding: 15px;
+    font-size: 15px;
+    z-index: 1;
+}
+
+.links a:hover {
+    color: #f46d13;
+    font-size: larger;
+}
+
+.showlinks {
+    height: 50vh;
+
+}
+
+
+/* section 1 */
+#slide-sec {
+    height: 30vh;
+
+    /* background-color: aquamarine; */
+}
+
+#slide-sec h2 {
+    text-align: center;
+    font-size: 31px;
+}
+
+#slide-sec h2 small {
+    display: block;
+    color: rgb(53, 24, 80);
+    font-size: 20px;
+}
+
+#slider--text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.fade-in {
+    animation: fade 4s infinite;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+        transform: rotate3d(2, 2, 0, 48deg);
+    }
+
+    20% {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 24deg);
+    }
+
+    80% {
+        opacity: 1;
+        transform: rotate3d(0, 0, 0, 24deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate3d(-2, -2, 0, 48deg);
+    }
+}
+
+/* art section */
+.scroll {
+    margin: auto;
+    width: 80%;
+    overflow: visible;
+    overflow-x: overlay;
+}
+
+.scroll ul {
+    padding: 0;
+    display: flex;
+    border-radius: 10px;
+    animation: scroll 50s infinite linear;
+}
+
+.scroll ul:hover {
+    animation-play-state: paused;
+}
+
+.scroll li {
+    margin: 0 10px;
+    list-style: none;
+    position: relative;
+    border-radius: 10px;
+}
+
+.scroll img {
+    height: auto;
+    width: 230px;
+    cursor: pointer;
+    transition: 0.1s;
+    position: relative;
+    border-radius: 10px;
+    max-width: fit-content;
+}
+
+.scroll img:hover {
+    transform: scale(1.04);
+}
+
+@keyframes scroll {
+    from {
+        margin-left: 0%
+    }
+
+    to {
+        margin-left: -100%
+    }
+}
+
+
+
+
+
+
+/* category section */
+
+#category {
+    height: 35vh;
+}
+
+/* footer section*/
+
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    background-color: rgb(29, 41, 47)
+}
+
+.footer-section h2 {
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.footer-section h2::after {
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background: #e65b00;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+}
+
+.footer-section p {
+    transition: all .2s linear;
+    margin-bottom: .6em;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-section p:hover {
+    transition: all .2s linear;
+    transform: translateX(4px);
+}
+
+.footer-section a:hover {
+    color: #f46d13;
+}
+
+.footer-item {
+    margin: 1rem;
+}
+
+.footer-item ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.footer-item li {
+    margin-right: 1rem;
+}
+
+.social ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.social ul li:hover {
+    color: #e65b00;
+    transform: scale(1.1);
+    transition: all .2s linear;
+}
+
+
+
+@media only screen and (max-width:600px) {
+    .header {
+        grid-template-columns: auto auto;
+        padding: 10px 5px;
+        height: auto;
+    }
+
+    .search {
+        grid-column: 2;
+        grid-row: 2;
+        grid-column: 1/span 2;
+        padding-top: 10px;
+    }
+
+    .icons {
+        padding: 5px;
+    }
+
+    .scroll img {
+        height: 100px;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .footer-section {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-left: 2rem;
+    }
+}
