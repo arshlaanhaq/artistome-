@@ -11,7 +11,7 @@
 
 .header {
     background: rgb(156,227,217);
-    background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%);
+    /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -58,7 +58,7 @@
 
 .links {
     background: rgb(156,227,217);
-background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%);
+/* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
     height: 0;
     transition: 0.6s;
     
@@ -186,8 +186,6 @@ background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 5
 }
 
 
-
-
 /* category section */
 
 #category {
@@ -205,7 +203,7 @@ background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 5
     flex-wrap: wrap;
     padding: 1rem 0;
     background: rgb(156,227,217);
-background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%);
+/* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
 }
 
 .footer-section h2 {
