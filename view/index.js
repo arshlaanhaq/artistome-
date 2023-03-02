@@ -9,7 +9,7 @@ document.getElementsByClassName("fa")[3].addEventListener(
 if (document.getElementById("slider--text")) {
 
     let slides = [
-        "<h2>Amazing arts that will amaze your mind.<small>Tomb of Arts</small></h2>",
+        "<h2>Amazing arts that will amaze your mind.<small>Home of Arts</small></h2>",
         "<h2>Greatest art work by an artist</h2>"
 
     ];
