@@ -1,5 +1,5 @@
 
-document.getElementsByClassName("fa")[3].addEventListener(
+document.getElementsByClassName("fa")[4].addEventListener(
     "click",function(){
         document.getElementsByClassName("links")[0].classList.toggle
         ("showlinks")
