@@ -6,11 +6,11 @@
     box-sizing: border-box;
     font-family: Outfit;
     color: rgb(65, 65, 136);
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 .header {
-    background-color: rgb(29, 41, 47);
+    background-color: rgb(114, 151, 170);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -21,15 +21,21 @@
 .logo {
     height: 40px;
 }
+.logo img{
+    height: 43px;
+    padding: 0px 23px;
+    width: 229px;
+}
 
 .search input {
-    height: 35px;
+    height: 39px;
     width: 100%;
     border: none;
     outline: none;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 18px;
+
 }
 
 .icons {
@@ -197,7 +203,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem 0;
-    background-color: rgb(29, 41, 47)
+    background-color:  rgb(114, 151, 170);
 }
 
 .footer-section h2 {
@@ -287,10 +293,16 @@ a {
     }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
     .footer-section {
         flex-direction: column;
         justify-content: flex-start;
         padding-left: 2rem;
+    }
+    .logo img {
+        height: 46px;
+        padding: 0px 3px;
+        width: 168px;
+      
     }
 }
