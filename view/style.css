@@ -27,7 +27,14 @@
     padding: 0px 23px;
     width: 229px;
 }
-
+.search{
+    display: flex;
+}
+.search a{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 20px;
+}
 .search input {
     height: 39px;
     width: 100%;
@@ -38,6 +45,7 @@
     font-size: 18px;
 
 }
+
 
 .icons {
     text-align: right;
