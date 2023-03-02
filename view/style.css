@@ -10,7 +10,7 @@
 }
 
 .header {
-    background-color: rgb(114, 151, 170);
+    background: linear-gradient(to right, #0066cc 5%, #99ff99 72%);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
@@ -56,7 +56,7 @@
 }
 
 .links {
-    background-color: rgb(114, 151, 170);
+    background: linear-gradient(to right, #0066cc 5%, #99ff99 72%);
     height: 0;
     transition: 0.6s;
     
@@ -204,7 +204,7 @@
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem 0;
-    background-color:  rgb(114, 151, 170);
+    background: linear-gradient(to right, #0066cc 5%, #99ff99 72%);
 }
 
 .footer-section h2 {
