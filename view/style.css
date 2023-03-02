@@ -211,31 +211,6 @@
         justify-content: center;
         font-size: 12px;
 }
-.fade-in {
-    animation: move 4s infinite;
-}
-
-@keyframes move {
-    0% {
-        opacity: 0;
-        transform: rotate3d(2,  0, 48deg);
-    }
-
-    20% {
-        opacity: 1;
-        transform: rotate3d( 0, 0, 24deg);
-    }
-
-    80% {
-        opacity: 1;
-        transform: rotate3d( 0, 0, 24deg);
-    }
-
-    100% {
-        opacity: 0;
-        transform: rotate3d( -2, 0, 48deg);
-    }
-}
 
 /* footer section*/
 
