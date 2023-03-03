@@ -6,9 +6,12 @@
     box-sizing: border-box;
     font-family: Outfit;
     color: rgb(65, 65, 136);
+    /* scroll-behavior: smooth; */
     /* border: 1px solid red; */
 }
-
+html{
+    scroll-behavior: smooth;
+}
 .header {
     background-color: #a58fcb;
     /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
