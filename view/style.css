@@ -314,8 +314,56 @@ html{
     color: white;
 }
 
-
-
+#btn{
+    margin: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button {
+    display: flex;
+    justify-content: center;
+    width: 41vw;
+  }
+  
+  .cta {
+    display: flex;
+    padding: 8px 18px;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    background: #a795d0;
+    transition: 1s;
+    box-shadow: 6px 6px 0 black;
+    transform: skewX(-15deg);
+  }
+  
+  .cta:focus {
+     outline: none; 
+  }
+  
+  .cta:hover {
+      transition: 0.5s;
+      box-shadow: 10px 10px 0 #FBC638;
+  }
+  
+  .cta span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 0px;
+  }
+  
+  .cta:hover  span:nth-child(2) {
+      transition: 0.5s;
+      margin-right: 45px;
+  }
+  
+    span:hover {
+      transform: skewX(15deg) 
+    }
+  
+   
 /* line section
  */
 
