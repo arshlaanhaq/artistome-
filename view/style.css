@@ -99,6 +99,79 @@ html{
 
 }
 
+/* slide1 section */
+
+.slideshow-container {
+    max-width: 1200px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(239, 239, 239);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+ 
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  .prev:hover, .next:hover {
+    background-color: rgba(111, 12, 12, 0.8);
+    color: black;
+  }
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 30px;
+    padding: 20px 12px;
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
+    text-align: center;
+}
+
+  /* The indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  .mySlides img{
+    height: 80vh;
+}
+  
+  /* Fading animation */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
 
 /* section 1 */
 #slide-sec {
@@ -450,6 +523,9 @@ a {
     transition: all .2s linear;
 }
 
+
+/* -----------------------------------------responsive section------------------------------------------------------------------ */
+
 @media (min-width:600px) and (max-width:1000px) {
     .card {
         height: 146px;
@@ -526,4 +602,10 @@ a {
         font-size: 23px;
         padding-top: 9px;
     }
+    .mySlides img{
+        height: 50vh;
+    }
 }
+@media only screen and (max-width: 300px) {
+    .prev, .next,.text {font-size: 11px}
+  }
