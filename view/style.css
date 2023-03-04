@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Outfit;
-    color: rgb(65, 65, 136);
+    color: rgb(0, 0, 0);
     /* scroll-behavior: smooth; */
     /* border: 1px solid red; */
 }
@@ -13,7 +13,7 @@ html{
     scroll-behavior: smooth;
 }
 .header {
-    background-color: #a58fcb;
+    background-color: #036164;
     /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -73,7 +73,7 @@ html{
 }
 
 .links {
-    background-color: #a58fcb;
+    background-color: #036164;
     /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
     height: 0;
     transition: 0.6s;
@@ -407,7 +407,7 @@ html{
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     color: white;
-    background: #a795d0;
+    background: #036164;
     transition: 1s;
     box-shadow: 6px 6px 0 black;
     transform: skewX(-15deg);
@@ -419,6 +419,7 @@ html{
   
   .cta:hover {
       transition: 0.5s;
+      background-color: orange;
       box-shadow: 10px 10px 0 #FBC638;
   }
   
@@ -432,7 +433,7 @@ html{
       margin-right: 45px;
   }
   
-    span:hover {
+    span{
       transform: skewX(15deg) 
     }
   
@@ -457,7 +458,7 @@ html{
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 1rem 0;
-    background-color: #a58fcb;
+    background-color: #036164;
     /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
 }
 
@@ -476,7 +477,9 @@ html{
     top: 2.5rem;
     left: 0;
 }
-
+.fa-brands:hover{
+    color: #e65b00;
+}
 .footer-section p {
     transition: all .2s linear;
     margin-bottom: .6em;
