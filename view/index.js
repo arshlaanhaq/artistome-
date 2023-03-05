@@ -55,3 +55,31 @@ if (document.getElementById("slider--text")) {
     slider(); // Start slider immediately
     setInterval(slider, 4000); // Slide every 4 seconds
 }
+// ****************************************scrollTotop****************************************************************************
+  var target = document.querySelector("footer");
+  var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
+  var top = document.getElementById("#top");
+  var rootElement = document.documentElement;
+  
+  function callback(entries, observer) {
+    // The callback will return an array of entries, even if you are only observing a single item
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Show button
+        scrollToTopBtn.classList.add("showBtn");
+      } else {
+        // Hide button
+        scrollToTopBtn.classList.remove("showBtn");
+      }
+    });
+  }
+  function scrollToTop() {
+    rootElement.scrollTo({
+      top ,
+      behavior: "smooth"
+    });
+  }
+  scrollToTopBtn.addEventListener("click", scrollToTop);
+  let observer = new IntersectionObserver(callback);
+  // Finally start observing the target element
+  observer.observe(target);
