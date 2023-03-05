@@ -9,9 +9,11 @@
     /* scroll-behavior: smooth; */
     /* border: 1px solid red; */
 }
-html{
+
+html {
     scroll-behavior: smooth;
 }
+
 .header {
     background-color: #036164;
     /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
@@ -76,6 +78,7 @@ html{
     background-color: #036164;
     /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
     height: 0;
+    overflow: hidden;
     transition: 0.6s;
 
 }
@@ -102,13 +105,14 @@ html{
 /* slide1 section */
 
 .slideshow-container {
-    max-width: 1200px;
+    max-width: 1280px;
     position: relative;
     margin: auto;
-  }
-  
-  /* Next & previous buttons */
-  .prev, .next {
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -121,20 +125,22 @@ html{
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-  }
-  
- 
-  .next {
+}
+
+
+.next {
     right: 0;
     border-radius: 3px 0 0 3px;
-  }
-  
-  .prev:hover, .next:hover {
+}
+
+.prev:hover,
+.next:hover {
     background-color: rgba(111, 12, 12, 0.8);
     color: black;
-  }
-  /* Caption text */
-  .text {
+}
+
+/* Caption text */
+.text {
     color: #f2f2f2;
     font-size: 30px;
     padding: 20px 12px;
@@ -144,8 +150,8 @@ html{
     text-align: center;
 }
 
-  /* The indicators */
-  .dot {
+/* The indicators */
+.dot {
     cursor: pointer;
     height: 15px;
     width: 15px;
@@ -154,24 +160,41 @@ html{
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
-  }
-  
-  .active, .dot:hover {
-    background-color: #717171;
-  }
-  .mySlides img{
-    height: 80vh;
 }
-  
-  /* Fading animation */
-  .fade {
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.mySlides img {
+    height: 86vh;
+}
+
+/* Fading animation */
+.fade {
     animation-name: fade;
     animation-duration: 1.5s;
-  }
-  @keyframes fade {
-    from {opacity: .4} 
-    to {opacity: 1}
-  }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
+.container {
+    background: beige;
+    z-index: -2;
+    width: 100%;
+    position: absolute;
+}
+
 
 /* section 1 */
 #slide-sec {
@@ -222,6 +245,10 @@ html{
         opacity: 0;
         transform: rotate3d(-2, 0, 48deg);
     }
+}
+
+hr {
+    margin: 15px 0;
 }
 
 /* art section */
@@ -280,13 +307,86 @@ html{
 #category {
     height: 100%;
 }
-.category{
+
+.cate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    margin-bottom: 5rem;
+}
+
+.cate button {
+    font-size: 49px;
+    box-shadow: 7px 6px 0 black;
+    /* border: 3px solid #0e0e10; */
+    transition: 0.4s;
+}
+
+.cate button:hover {
+    cursor: pointer;
+    /* text-decoration: 1px black underline; */
+    border-top-right-radius: 17px;
+    border-block-end-width: 1px;
+    border-bottom-color: #f37474;
+    border-top-color: #f37474;
+    border-bottom-left-radius: 15px;
+    border-right-style: hidden;
+    color: red;
+    /* background-color: #78c078; */
+    /* border-left-style: dased; */
+    border-left-color: #f37474;
+    box-shadow: 6px 8px 0 #f37474;
+    transform: translateY(-20px);
+}
+
+.Categorys {
     display: flex;
     justify-content: space-around;
+
 }
-.category li{
-    list-style: none;
+
+.button {
+    font-size: 16px;
+    width: 12vw;
+    font-weight: 200;
+    letter-spacing: 1px;
+    padding: 13px 20px 13px;
+    outline: 0;
+    border: 1px solid black;
+    cursor: pointer;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
 }
+
+.button:after {
+    content: "";
+    background-color: #ffe54c;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    height: 100%;
+    top: 7px;
+    left: 7px;
+    transition: 0.2s;
+}
+
+.button:hover:after {
+    top: 0px;
+    left: 0px;
+}
+
+
+@media (min-width: 768px) {
+    .button-52 {
+        padding: 13px 50px 13px;
+    }
+}
+
+
 
 /* cards_section */
 
@@ -387,20 +487,20 @@ html{
     color: white;
 }
 
-#btn{
+#btn {
     margin: 24px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .button {
+}
+
+.bttn {
     display: flex;
     justify-content: center;
     width: 41vw;
-  }
-  
-  .cta {
+}
+
+.cta {
     display: flex;
     padding: 8px 18px;
     text-decoration: none;
@@ -411,33 +511,33 @@ html{
     transition: 1s;
     box-shadow: 6px 6px 0 black;
     transform: skewX(-15deg);
-  }
-  
-  .cta:focus {
-     outline: none; 
-  }
-  
-  .cta:hover {
-      transition: 0.5s;
-      background-color: orange;
-      box-shadow: 10px 10px 0 #FBC638;
-  }
-  
-  .cta span:nth-child(2) {
-      transition: 0.5s;
-      margin-right: 0px;
-  }
-  
-  .cta:hover  span:nth-child(2) {
-      transition: 0.5s;
-      margin-right: 45px;
-  }
-  
-    span{
-      transform: skewX(15deg) 
-    }
-  
-   
+}
+
+.cta:focus {
+    outline: none;
+}
+
+.cta:hover {
+    transition: 0.5s;
+    background-color: orange;
+    box-shadow: 10px 10px 0 #FBC638;
+}
+
+.cta span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 0px;
+}
+
+.cta:hover span:nth-child(2) {
+    transition: 0.5s;
+    margin-right: 45px;
+}
+
+span {
+    transform: skewX(15deg)
+}
+
+
 /* line section
  */
 
@@ -477,9 +577,11 @@ html{
     top: 2.5rem;
     left: 0;
 }
-.fa-brands:hover{
+
+.fa-brands:hover {
     color: #e65b00;
 }
+
 .footer-section p {
     transition: all .2s linear;
     margin-bottom: .6em;
@@ -538,10 +640,11 @@ a {
         font-size: 11px;
         margin-top: 4.5px;
     }
+
     .card .info button {
         margin-top: 10px;
         border-radius: 12px;
-       
+
     }
 }
 
@@ -567,24 +670,42 @@ a {
         height: 100px;
         width: auto;
     }
+
     .wrapper {
-        
+
         flex-direction: column;
     }
-    .card{
+
+    .card {
         width: 62vw;
         height: 23vh;
     }
+
     .card .info {
         height: 18vh;
     }
-    .card .info p{
+
+    .card .info p {
         font-size: 12px;
     }
-    .card .info button{
-       margin-top: 12px;
+
+    .card .info button {
+        margin-top: 12px;
     }
 
+    .cate {
+
+        margin: 30px 0;
+        margin-bottom: 2rem
+    }
+    .Categorys{
+        display: block;
+    }
+    .button {
+        width: 44vw;
+        margin: 12px 10px;
+    }
+  
 }
 
 @media screen and (max-width: 450px) {
@@ -605,10 +726,17 @@ a {
         font-size: 23px;
         padding-top: 9px;
     }
-    .mySlides img{
-        height: 50vh;
+
+    .mySlides img {
+        height: 46vh;
     }
 }
+
 @media only screen and (max-width: 300px) {
-    .prev, .next,.text {font-size: 11px}
-  }
+
+    .prev,
+    .next,
+    .text {
+        font-size: 11px
+    }
+}
