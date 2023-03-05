@@ -560,8 +560,8 @@ span {
     width: 48px;
     height: 41px;
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 10px;
     z-index: 100;
     opacity: 0;
     transform: translateY(100px);
