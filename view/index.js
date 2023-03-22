@@ -75,7 +75,7 @@ if (document.getElementById("slider--text")) {
   }
   function scrollToTop() {
     rootElement.scrollTo({
-      top ,
+      top,
       behavior: "smooth"
     });
   }
