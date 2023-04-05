@@ -1,232 +1,202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My_cart</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/view/cart.css">
+	<link rel="icon" href="/view/img/title.png " type="image/icon type">
+	<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+	<title>My_cart</title>
 </head>
 <style>
-    * {
-	border: 0;
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-}
-:root {
-	--hue: 223;
-	--bg: hsl(var(--hue),90%,90%);
-	--fg: hsl(var(--hue),90%,10%);
-	--trans-dur: 0.3s;
-	font-size: calc(20px + (30 - 20) * (100vw - 320px) / (1280 - 320));
-}
-body {
-	background: var(--bg);
-	color: var(--fg);
-	/* font: 1em/1.5 sans-serif; */
-	height: 100vh;
-	display: grid;
-	place-items: center;
-}
-.pencil {
-	display: block;
-	width: 8em;
-	height: 8em;
-}
-.pencil__body1,
-.pencil__body2,
-.pencil__body3,
-.pencil__eraser,
-.pencil__eraser-skew,
-.pencil__point,
-.pencil__rotate,
-.pencil__stroke {
-	animation-duration: 3s;
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-}
-.pencil__body1,
-.pencil__body2,
-.pencil__body3 {
-	transform: rotate(-90deg);
-}
-.pencil__body1 {
-	animation-name: pencilBody1;
-}
-.pencil__body2 {
-	animation-name: pencilBody2;
-}
-.pencil__body3 {
-	animation-name: pencilBody3;
-}
-.pencil__eraser {
-	animation-name: pencilEraser;
-	transform: rotate(-90deg) translate(49px,0);
-}
-.pencil__eraser-skew {
-	animation-name: pencilEraserSkew;
-	animation-timing-function: ease-in-out;
-}
-.pencil__point {
-	animation-name: pencilPoint;
-	transform: rotate(-90deg) translate(49px,-30px);
-}
-.pencil__rotate {
-	animation-name: pencilRotate;
-}
-.pencil__stroke {
-	animation-name: pencilStroke;
-	transform: translate(100px,100px) rotate(-113deg);
-}
+	#preloader {
+		overflow: hidden;
+		background: #fff;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		position: fixed;
+		z-index: 9999
+	}
 
-/* Animations */
-@keyframes pencilBody1 {
-	from,
-	to {
-		stroke-dashoffset: 351.86;
-		transform: rotate(-90deg);
+	.spinner {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		z-index: 1;
+		height: 40px;
+		width: 40px;
+		transform: translate(-50%, -50%)
 	}
-	50% {
-		stroke-dashoffset: 150.8; /* 3/8 of diameter */
-		transform: rotate(-225deg);
+
+	[class^="ball-"] {
+		position: absolute;
+		display: block;
+		left: 30px;
+		width: 12px;
+		height: 12px;
+		border-radius: 6px;
+		transition: all 0.5s;
+		animation: circleRotate 4s both infinite;
+		transform-origin: 0 250% 0
 	}
-}
-@keyframes pencilBody2 {
-	from,
-	to {
-		stroke-dashoffset: 406.84;
-		transform: rotate(-90deg);
+
+	@keyframes circleRotate {
+		0% {
+			transform: rotate(0deg)
+		}
+
+		100% {
+			transform: rotate(1440deg)
+		}
 	}
-	50% {
-		stroke-dashoffset: 174.36;
-		transform: rotate(-225deg);
+
+	.ball-1 {
+		z-index: -1;
+		background-color: #ffd700;
+		animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9)
 	}
-}
-@keyframes pencilBody3 {
-	from,
-	to {
-		stroke-dashoffset: 296.88;
-		transform: rotate(-90deg);
+
+	.ball-2 {
+		z-index: -2;
+		background-color: #03A9F4;
+		animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9)
 	}
-	50% {
-		stroke-dashoffset: 127.23;
-		transform: rotate(-225deg);
+
+	.ball-3 {
+		z-index: -3;
+		background-color: #C8102E;
+		animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9)
 	}
-}
-@keyframes pencilEraser {
-	from,
-	to {
-		transform: rotate(-45deg) translate(49px,0);
+
+	.ball-4 {
+		z-index: -4;
+		background-color: #009688;
+		animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9)
 	}
-	50% {
-		transform: rotate(0deg) translate(49px,0);
+
+	.ball-5 {
+		z-index: -5;
+		background-color: #ff7f50;
+		animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9)
 	}
-}
-@keyframes pencilEraserSkew {
-	from,
-	32.5%,
-	67.5%,
-	to {
-		transform: skewX(0);
+
+	.ball-6 {
+		z-index: -6;
+		background-color: #8BC34A;
+		animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9)
 	}
-	35%,
-	65% {
-		transform: skewX(-4deg);
+
+	.ball-7 {
+		z-index: -7;
+		background-color: #CDDC39;
+		animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9)
 	}
-	37.5%, 
-	62.5% {
-		transform: skewX(8deg);
+
+	.ball-8 {
+		z-index: -8;
+		background-color: #C8102E;
+		animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9)
 	}
-	40%,
-	45%,
-	50%,
-	55%,
-	60% {
-		transform: skewX(-15deg);
-	}
-	42.5%,
-	47.5%,
-	52.5%,
-	57.5% {
-		transform: skewX(15deg);
-	}
-}
-@keyframes pencilPoint {
-	from,
-	to {
-		transform: rotate(-90deg) translate(49px,-30px);
-	}
-	50% {
-		transform: rotate(-225deg) translate(49px,-30px);
-	}
-}
-@keyframes pencilRotate {
-	from {
-		transform: translate(100px,100px) rotate(0);
-	}
-	to {
-		transform: translate(100px,100px) rotate(720deg);
-	}
-}
-@keyframes pencilStroke {
-	from {
-		stroke-dashoffset: 439.82;
-		transform: translate(100px,100px) rotate(-113deg);
-	}
-	50% {
-		stroke-dashoffset: 164.93;
-		transform: translate(100px,100px) rotate(-113deg);
-	}
-	75%,
-	to {
-		stroke-dashoffset: 439.82;
-		transform: translate(100px,100px) rotate(112deg);
-	}
-}
 </style>
+
 <body>
-    <div id="preloader">
-        <svg class="pencil" viewBox="0 0 200 200" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <clipPath id="pencil-eraser">
-                    <rect rx="5" ry="5" width="30" height="30"></rect>
-                </clipPath>
-            </defs>
-            <circle class="pencil__stroke" r="70" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="439.82 439.82" stroke-dashoffset="439.82" stroke-linecap="round" transform="rotate(-113,100,100)" />
-            <g class="pencil__rotate" transform="translate(100,100)">
-                <g fill="none">
-                    <circle class="pencil__body1" r="64" stroke="hsl(223,90%,50%)" stroke-width="30" stroke-dasharray="402.12 402.12" stroke-dashoffset="402" transform="rotate(-90)" />
-                    <circle class="pencil__body2" r="74" stroke="hsl(223,90%,60%)" stroke-width="10" stroke-dasharray="464.96 464.96" stroke-dashoffset="465" transform="rotate(-90)" />
-                    <circle class="pencil__body3" r="54" stroke="hsl(223,90%,40%)" stroke-width="10" stroke-dasharray="339.29 339.29" stroke-dashoffset="339" transform="rotate(-90)" />
-                </g>
-                <g class="pencil__eraser" transform="rotate(-90) translate(49,0)">
-                    <g class="pencil__eraser-skew">
-                        <rect fill="hsl(223,90%,70%)" rx="5" ry="5" width="30" height="30" />
-                        <rect fill="hsl(223,90%,60%)" width="5" height="30" clip-path="url(#pencil-eraser)" />
-                        <rect fill="hsl(223,10%,90%)" width="30" height="20" />
-                        <rect fill="hsl(223,10%,70%)" width="15" height="20" />
-                        <rect fill="hsl(223,10%,80%)" width="5" height="20" />
-                        <rect fill="hsla(223,10%,10%,0.2)" y="6" width="30" height="2" />
-                        <rect fill="hsla(223,10%,10%,0.2)" y="13" width="30" height="2" />
-                    </g>
-                </g>
-                <g class="pencil__point" transform="rotate(-90) translate(49,-30)">
-                    <polygon fill="hsl(33,90%,70%)" points="15 0,30 30,0 30" />
-                    <polygon fill="hsl(33,90%,50%)" points="15 0,6 30,0 30" />
-                    <polygon fill="hsl(223,10%,10%)" points="15 0,20 10,10 10" />
-                </g>
-            </g>
-        </svg>
-    </div>
-    
-    helooo
+	<div id='preloader'>
+		<div class='spinner'>
+			<span class='ball-1'></span>
+			<span class='ball-2'></span>
+			<span class='ball-3'></span>
+			<span class='ball-4'></span>
+			<span class='ball-5'></span>
+			<span class='ball-6'></span>
+			<span class='ball-7'></span>
+			<span class='ball-8'></span>
+		</div>
+	</div>
+	<header>
+		<div class="nav container">
+			<a href="#" class="logo">My Cart</a>
+			<i class='bx bxs-shopping-bag' id="cart-icon"></i>
+			<!-- Cart -->
+			<div class="cart">
+				<h2 class="cart-title">Your Cart</h2>
+				<!-- Conter -->
+				<div class="cart-content">
+					<div class="cart-box">
+						<img src="/view/img/arts/painting (2).png" alt="" class="cart-img">
+						<div class="detail-box">
+							<div class="cart-product-title">painting1</div>
+							<div class="cart-price">₹250</div>
+							<input type="number" value="1" class="cart-quantity">
+						</div>
+						<!-- Remove Cart -->
+						<i class='bx bxs-trash-alt cart-remove'></i>
+					</div>
+				</div>
+				<!-- Total -->
+				<div class="total">
+					<div class="total-title">Total</div>
+					<div class="total-price">₹0</div>
+				</div>
+				<!-- Buy Button -->
+				<button type="button" class="btn-buy">Buy Now</button>
+				<!-- Cart Close -->
+				<i class='bx bx-x' id="close-cart"></i>
+			</div>
+		</div>
+	</header>
+	<!-- shop -->
+	<section class="shop container">
+		<h2 class="section-title">Products</h2>
+		<!-- Content -->
+		<h3>Digital Arts</h3>
+		<div class="shop-content">
+			<!-- Box 1 -->
+			<div class="product-box">
+				<img src="/view/img/arts/digital1.jpeg" alt="" class="product-img">
+				<h2 class="product-title">ART1</h2>
+				<span class="price">₹250</span>
+				<i class='bx bx-shopping-bag add-cart'></i>
+			</div>
+			<!-- Box 2 -->
+			<div class="product-box">
+				<img src="/view/img/arts/digital2.jpeg" alt="" class="product-img">
+				<h2 class="product-title">ART2</h2>
+				<span class="price">₹250</span>
+				<i class='bx bx-shopping-bag add-cart'></i>
+			</div>
+			<!-- Box 3 -->
+			<div class="product-box">
+				<img src="/view/img/arts/digital3.jpeg" alt="" class="product-img">
+				<h2 class="product-title">ART3</h2>
+				<span class="price">₹500</span>
+				<i class='bx bx-shopping-bag add-cart'></i>
+			</div>
+			<!-- Box 4 -->
+			<div class="product-box">
+				<img src="/view/img/arts/digital4.jpeg" alt="" class="product-img">
+				<h2 class="product-title">ART4</h2>
+				<span class="price">₹200</span>
+				<i class='bx bx-shopping-bag add-cart'></i>
+			</div>
+		</div>
+
+	</section>
+
+
 </body>
+<script src="/view/cart.js"></script>
 <script>
-   let loader=  document.getElementById("preloader");
-   window.addEventListener("load" , function(){
-    loader.style.display ="none";
-   }
-   )
+	let loader = document.getElementById("preloader");
+	window.addEventListener("load", function () {
+		loader.style.display = "none";
+	}
+	)
 
 </script>
+
 </html>
