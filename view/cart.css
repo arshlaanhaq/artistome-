@@ -7,6 +7,7 @@
     font-family: monospace;
     scroll-behavior: smooth;
     list-style: none;
+    color: rgb(0, 0, 0);
     text-decoration: none;
     scroll-behavior: smooth;
     /* border: 1px solid red; */
@@ -83,13 +84,14 @@ h3 {
     top: 0;
     right: -100%;
     width: 360px;
-    min-height: 100vh;
+    height: 100vh;
     padding: 20px;
     background: white;
-    box-shadow: -2px 4px hs1(4% 15% / 10%);
+    box-shadow: -2px 4px hs1(0 4% 15% / 10%);
     transition: 0.3s;
 }
-.cart.active{
+
+.cart.active {
     right: 0;
 }
 
@@ -189,6 +191,7 @@ h3 {
 .shop {
     margin-top: 2rem;
 }
+
 hr {
     margin: 15px 31px;
     border-top: double;
@@ -240,4 +243,150 @@ hr {
 
 .add-cart:hover {
     background: hsl(249, 32%, 17%);
+}
+
+.scrollToTopBtn {
+    background-color: black;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 48px;
+    width: 48px;
+    height: 41px;
+    position: fixed;
+    bottom: 30px;
+    right: 10px;
+    z-index: 100;
+    opacity: 0;
+    transform: translateY(100px);
+
+    transition: all 0.5s ease;
+  }
+  
+  .showBtn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+/* footer section*/
+
+
+.footer-section {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    background-color: rgb(245 222 179);
+    /* background: linear-gradient(90deg, rgba(156,227,217,1) 0%, rgba(219,224,150,1) 50%, rgba(177,207,161,1) 100%); */
+}
+
+.footer-section h2 {
+    margin-bottom: 1rem;
+    color: rgb(13 14 160 / 62%);
+    position: relative;
+}
+
+.footer-section h2::after {
+    content: '';
+    width: 4rem;
+    height: .2rem;
+    background: #e65b00;
+    position: absolute;
+    top: 2.5rem;
+    left: 0;
+}
+
+.fa-brands:hover {
+    color: #e65b00;
+}
+
+.footer-section p {
+    transition: all .2s linear;
+    margin-bottom: .6em;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer-section p:hover {
+    transition: all .2s linear;
+    transform: translateX(4px);
+}
+
+.footer-section a:hover {
+    color: #f46d13;
+}
+
+.footer-item {
+    margin: 1rem;
+}
+
+.footer-item ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.footer-item li {
+    margin-right: 1rem;
+}
+
+.social ul li {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.social ul li:hover {
+    color: #e65b00;
+    transform: scale(1.1);
+    transition: all .2s linear;
+}
+/* Breakpoints / Making Responsive */
+@media (max-width: 1080px) {
+    .nav {
+        padding: 15px;
+    }
+
+    section {
+        padding: 3rem © 2rem;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .shop {
+        margin-top: 2rem !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .nav {
+        padding: 11px;
+    }
+
+    logo {
+        font-size: 1rem;
+    }
+
+    .cart {
+        width: 320px;
+    }
+}
+
+@media (max-width: 360px) {
+    .shop {
+        margin-top: 1rem !important;
+    }
+
+    .cart {
+        width: 280px;
+    }
 }
