@@ -326,7 +326,11 @@ hr {
     transition: 0.4s;
 }
 
-
+.cate button:hover {
+    cursor: pointer;
+    /* text-decoration: 1px black underline; */
+ 
+}
 
 .Categorys {
     display: flex;
