@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Outfit;
+    
     color: rgb(0, 0, 0);
     /* scroll-behavior: smooth; */
     /* border: 1px solid red; */
@@ -326,11 +327,7 @@ hr {
     transition: 0.4s;
 }
 
-.cate button:hover {
-    cursor: pointer;
-    /* text-decoration: 1px black underline; */
- 
-}
+
 
 .Categorys {
     display: flex;
