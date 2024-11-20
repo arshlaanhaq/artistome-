@@ -28,10 +28,11 @@ function renderVirtual(swiper, slides, virtualData) {
       slidesToRender.push(slides[getSlideIndex(i)]);
     }
   }
-  return slidesToRender.map(child => {
+  return slidesToRender.map((child, index) => {
     return /*#__PURE__*/React.cloneElement(child, {
       swiper,
-      style
+      style,
+      key: `slide-${index}`
     });
   });
 }

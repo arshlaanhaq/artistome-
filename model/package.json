@@ -1,0 +1,39 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.7.3",
+    "nodemon": "^2.0.22",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0",
+    "punycode": "^2.3.1",
+    "stripe": "^17.3.1",
+    "swiper": "^9.1.0"
+  },
+  "name": "artistome",
+  "version": "1.0.0",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.cjs",
+    "dev": "nodemon src/app.js -e js,ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arshlaanhaq/artistome-.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arshlaanhaq/artistome-/issues"
+  },
+  "homepage": "https://github.com/arshlaanhaq/artistome-#readme",
+  "keywords": [],
+  "description": ""
+}

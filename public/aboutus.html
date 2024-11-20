@@ -1,12 +1,545 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ABOUT US</title>
+    <title> About Us </title>
+    <link rel="icon" href="./css/img/title.png " type="image/icon type">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
+<style>
+
+body{
+    background-color: beige;
+}
+header {
+    /* height: 300px; */
+    position: relative;
+}
+
+
+
+header::after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-size: cover;
+    background-color: wheat;
+    background-position: bottom;
+}
+
+.navbar {
+    color: #fff;
+    padding: 1rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.navbar .responsive {
+    display: none;
+}
+
+.navbar ul li {
+    padding: 8px 12px;
+}
+
+.navbar ul li a {
+    z-index: 2;
+    color: #0a0a0a;
+    position: relative;
+    font-size: larger;
+    text-decoration: none;
+}
+
+#hamBurger {
+    display: none;
+}
+
+.button {
+    padding: 7px 10px;
+    color: #fff;
+    animation: none;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    background-color: rgb(32, 154, 202);
+}
+
+#home {
+    width: 100%;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.home-left {
+    height: 300px;
+    position: relative;
+}
+
+.home-left img {
+    height: 100%;
+    border-radius: 10px;
+}
+
+.home-right {
+    width: 50%;
+}
+
+.home-heading {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.home-para {
+    margin-bottom: 20px;
+}
+
+.btn {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+    width: 0;
+}
+
+.btn:hover::after {
+    content: '';
+    height: 4px;
+    position: absolute;
+    background-color: aqua;
+    left: 0;
+    bottom: -10px;
+    animation: width;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    border-radius: 5px;
+}
+
+@keyframes width {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+#workFlow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.heading {
+    margin: 1rem auto;
+    text-align: center;
+}
+
+.para {
+    margin: 1rem auto;
+}
+
+.num-container {
+    width: 70%;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.num-item {
+    font-size: 1.5rem;
+    line-height: 1.4rem;
+    color: rgb(43, 126, 199);
+}
+
+/* Our Goal */
+#goal {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.goal-left {
+    width: 60%;
+    line-height: 2rem;
+}
+
+.goal-left h2 {
+    font-size: 2.4rem;
+}
+
+.goal-left p {
+    line-height: 1.5rem;
+    margin: 1rem 0;
+}
+
+.goal-left ul {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.goal-left ul li::before {
+    line-height: 1.5rem;
+    content: '✓';
+    color: red;
+}
+
+.goal-right {
+    position: relative;
+    width: 35%;
+}
+
+.goal-right img {
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    filter: drop-shadow(3px 4px 5px black);
+    transition: all 0.2s linear;
+}
+
+.goal-right img:hover {
+    transform: translateY(-5px);
+    filter: drop-shadow(5px 6px 7px black);
+}
+
+/* Our Team */
+#our-Team {
+    width: 80%;
+    margin: 4rem auto 1rem;
+}
+
+#our-Team h2 {
+    text-align: center;
+    margin: 1rem auto 4rem;
+    position: relative;
+}
+
+#our-Team h2::after {
+    content: '';
+    height: 4px;
+    margin: 0 auto;
+    text-align: center;
+    width: 15%;
+    background-color: aqua;
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    border-radius: 5px;
+    transform: translate(-50%);
+}
+
+.teamContainer {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.team-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0.5rem;
+}
+
+.team-item h5 {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.team-item span {
+    margin-top: .4rem;
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    /* color: rgb(7, 176, 176); */
+}
+
+.team-item img {
+    width: 100px;
+}
+
+footer {
+    padding:  0;
+    text-align: center;
+}
+
+@media screen and (max-width: 784px) {
+    #list {
+        display: none;
+    }
+
+    #hamBurger {
+        cursor: pointer;
+        display: block;
+        z-index: 20;
+        font-size: 2rem;
+    }
+
+    .navbar .responsive {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0%;
+        left: 100%;
+        padding: 2rem 0;
+        z-index: 2;
+        height: 100vh;
+        background-color: wheat;
+        width: 100%;
+        transition: all 0.5s linear;
+        opacity: 0.9;
+    }
+
+    .navbar ul li {
+        margin: 0.4rem 0;
+    }
+
+    .responsive.active {
+        left: 0%;
+    }
+
+    .goal-right {
+        width: 100%;
+        margin: 0 auto 2rem;
+    }
+
+    .goal-left {
+        width: 100%;
+        text-align: center;
+    }
+
+    #goal {
+        flex-direction: column-reverse;
+    }
+}
+/* .footer-section h2::after {
+    content: '';
+    width: 4rem;
+    height: 0.2rem;
+    background: #e65b00;
+    position: absolute;
+    top: 2.5rem;
+    left: 124px;
+} */
+
+@media screen and (max-width: 633px) {
+    #home {
+        flex-direction: column;
+    }
+
+    .home-left {
+        width: 100%;
+        height: auto;
+    }
+
+    .home-left img {
+        width: 100%;
+    }
+
+    .home-right {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
+    .para {
+        width: 90%;
+    }
+
+    .num-container {
+        flex-direction: column;
+    }
+
+    .num-item {
+        margin: 1rem;
+    }
+
+    .teamContainer {
+        justify-content: center;
+    }
+}
+/* .footer-section h2::after {
+    content: '';
+    width: 4rem;
+    height: 0.2rem;
+    background: #e65b00;
+    position: absolute;
+    top: 2.5rem;
+    left: 124px;
+} */
+</style>
+
 <body>
-    
+    <!--================== Header Section Starts from Here ==================-->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="/"><img src="./css/img/logo.png" alt="logo"></a>
+            </div>
+            <ul id="list">
+                <li><a href="/"> Home </a></li>
+           
+     
+            </ul>
+            <ul id="hamBurger">
+                <li><i class="fa-solid fa-bars"></i></li>
+            </ul>
+            <ul class="responsive">
+                <li><a href="/"> Home </a></li>
+                
+
+            </ul>
+        </nav>
+    </header>
+    <!--================== Header Section Ends Here -->
+
+
+    <!--================== Home Section Starts from Here ==================-->
+    <section id="home">
+        <div class="home-left">
+            <img src="https://cdn.pixabay.com/photo/2016/06/13/09/57/meeting-1453895_640.png" alt="">
+        </div>
+        <div class="home-right">
+            <h2 class="home-heading">Seamless Workflow Solutions Innovators </h2>
+            <p class="home-para">At our website, we are passionate about connecting artists with art enthusiasts, collectors, and buyers from all corners of the globe. Our dedicated team works tirelessly to create a dynamic platform that showcases a diverse collection of artworks, spanning various genres, styles, and mediums. We strive to provide artists with a global stage to exhibit their talents and gain recognition, while offering art lovers an immersive experience to discover and appreciate captivating pieces. With a commitment to transparency, accessibility, and ethical practices, we aim to revolutionize the way art is experienced and celebrated, fostering a vibrant community that embraces the transformative power of creativity. Join us in our mission to support artists, ignite inspiration, and bring the joy of art to every corner of the world.</p>
+            <a href="" class="btn"> Our Work</a>
+        </div>
+    </section>
+    <!--================== Home Section Ends Here -->
+
+    <!--================== Workflow Section Starts from Here ==================-->
+    <section id="workFlow">
+        <h2 class="heading">Personalized Art Discovery Facilitators
+        </h2>
+        <p class="para">At Personalized Art Discovery Facilitators, we believe that art is a deeply personal experience. We are dedicated to helping art enthusiasts embark on a transformative journey of artistic exploration and self-discovery.</p>
+        <div class="num-container">
+            <div class="num-item"><span>27,882 <br>Customers</span></div>
+            <div class="num-item"><span>90% <br>Action Plans</span></div>
+            <div class="num-item"><span>70,592 <br>Art's</span></div>
+        </div>
+    </section>
+    <!--================== Workflow Section Ends Here -->
+
+
+    <!--================== Goal Section Starts from Here ==================-->
+    <section id="goal">
+        <div class="goal-left">
+            <h2>Our Goal</h2>
+            <p>Our goal is to create a vibrant and inclusive online platform that connects artists with art enthusiasts, collectors, and buyers from around the world. We aim to provide a seamless and user-friendly experience that promotes the discovery, appreciation, and acquisition of artworks. Our focus is on fostering a thriving community, curating a diverse collection, and promoting accessibility to make art accessible to all. Additionally, we strive to support artists, provide a personalized experience, and encourage ethical practices.</p>
+            <ul>
+                <li> Empower Artists: Our primary objective is to empower artists by providing them with a global platform to showcase their talents and reach a wider audience. We strive to support artists from diverse backgrounds, styles, and mediums, giving them the opportunity to share their creations and gain recognition.</li>
+                <li> Curate a Diverse Collection: We are committed to curating a diverse and extensive collection of artworks, spanning various genres, styles, and artistic expressions. By showcasing a wide range of artistic perspectives, we aim to cater to different tastes and preferences, ensuring there is something for everyone.</li>
+                <li> Foster a Community: Our art selling website is more than just a marketplace. We want to foster a thriving community of artists, art enthusiasts, and collectors who can engage in meaningful discussions, share insights, and establish connections. By creating a supportive environment, we hope to cultivate a sense of belonging and inspire collaborations.</li>
+            </ul>
+            <a href="" class="btn"> Contact Us</a>
+        </div>
+        <div class="goal-right">
+            <img src="https://cdn.pixabay.com/photo/2018/03/01/05/46/business-3189797_640.png" alt="">
+        </div>
+    </section>
+    <!--================== Goal Section Ends Here -->
+
+    <!--================== Our Team Section Starts from Here ==================-->
+    <section id="our-Team">
+        <h2>Our Member</h2>
+        <div class="teamContainer">
+            <div class="team-item">
+                <img src="https://www.svg.com/img/gallery/the-untold-truth-of-among-us/intro-1610036683.jpg" alt="">
+                <h5 class="member-name">Akash Diwakar</h5>
+                <span class="role">UI Design</span>
+            </div>
+            <div class="team-item">
+                <img src="https://www.svg.com/img/gallery/the-untold-truth-of-among-us/intro-1610036683.jpg" alt="">
+                <h5 class="member-name">Aneesh kushwaha</h5>
+                <span class="role">Planning/Designing</span>
+            </div>
+            <div class="team-item">
+                <img src="https://www.svg.com/img/gallery/the-untold-truth-of-among-us/intro-1610036683.jpg" alt="">
+                <h5 class="member-name">Aniket Patel</h5>
+                <span class="role">UI Design/Security </span>
+            </div>
+            <div class="team-item">
+                <img src="https://www.svg.com/img/gallery/the-untold-truth-of-among-us/intro-1610036683.jpg" alt="">
+                <h5 class="member-name">Arshlaan Haque</h5>
+                <span class="role">front/Backned DEvlopment</span>
+            </div>
+        </div>
+    </section>
+    <!--================== Our Team Section Ends Here -->
+
+    <!--================== Footer Starts from Here ==================-->
+    <footer>
+        <div class="footer-section">
+            <div class="footer-item">
+
+                <h2>Company</h2>
+                <p><a href="../aboutus.html"> About Us</a></p>
+                <p><a href=""> Contact Us</a></p>
+                <p><a href=""> Privacy Policy</a></p>
+            </div>
+            <div class="footer-item">
+                <h2>Get Help </h2>
+                <p><a href=""> FAQ</a></p>
+                <p><a href=""> Shipping </a></p>
+                <p><a href=""> Retuns </a></p>
+                <p><a href=""> Payment Options </a></p>
+            </div>
+            <div class="footer-item social">
+                <h2> Follow Us </h2>
+                <ul>
+                    <li><a href="https://www.instagram.com/artistome01/" target="_blank"> <i
+                                class="fa-brands fa-instagram"></i></a> </li>
+                    <li><a href="#"></a> <i class="fa-brands fa-linkedin-in"></i> </li>
+                    <li><a href="#"></a> <i class="fa-brands fa-youtube"></i> </li>
+                    <li><a href="#"></a> <i class="fa-brands fa-twitter"></i> </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- ================== Footer Ends Here -->
+
 </body>
+<script>
+    const hamBurgerBtn = document.getElementById('hamBurger');
+hamBurgerBtn.addEventListener('click', function () {
+    const responsiveRight = document.querySelector('.responsive')
+    hamBurgerBtn.classList.toggle('active')
+    if (hamBurgerBtn.classList.contains('active')) {
+        responsiveRight.classList.add('active')
+    }
+    else {
+        responsiveRight.classList.remove('active')
+    }
+})
+</script>
 </html>

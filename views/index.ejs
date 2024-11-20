@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artistome</title>
+    <link rel="icon" href="./css/img/title.png " type="image/icon type">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<style>
+    #preloader {
+        overflow: hidden;
+        background: #fff;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: fixed;
+        z-index: 9999
+    }
+
+    .spinner {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 1;
+        height: 40px;
+        width: 40px;
+        transform: translate(-50%, -50%)
+    }
+
+    [class^="ball-"] {
+        position: absolute;
+        display: block;
+        left: 30px;
+        width: 12px;
+        height: 12px;
+        border-radius: 6px;
+        transition: all 0.5s;
+        animation: circleRotate 4s both infinite;
+        transform-origin: 0 250% 0
+    }
+
+    @keyframes circleRotate {
+        0% {
+            transform: rotate(0deg)
+        }
+
+        100% {
+            transform: rotate(1440deg)
+        }
+    }
+
+    .ball-1 {
+        z-index: -1;
+        background-color: #ffd700;
+        animation-timing-function: cubic-bezier(0.5, 0.3, 0.9, 0.9)
+    }
+
+    .ball-2 {
+        z-index: -2;
+        background-color: #03A9F4;
+        animation-timing-function: cubic-bezier(0.5, 0.6, 0.9, 0.9)
+    }
+
+    .ball-3 {
+        z-index: -3;
+        background-color: #C8102E;
+        animation-timing-function: cubic-bezier(0.5, 0.9, 0.9, 0.9)
+    }
+
+    .ball-4 {
+        z-index: -4;
+        background-color: #009688;
+        animation-timing-function: cubic-bezier(0.5, 1.2, 0.9, 0.9)
+    }
+
+    .ball-5 {
+        z-index: -5;
+        background-color: #ff7f50;
+        animation-timing-function: cubic-bezier(0.5, 1.5, 0.9, 0.9)
+    }
+
+    .ball-6 {
+        z-index: -6;
+        background-color: #8BC34A;
+        animation-timing-function: cubic-bezier(0.5, 1.8, 0.9, 0.9)
+    }
+
+    .ball-7 {
+        z-index: -7;
+        background-color: #CDDC39;
+        animation-timing-function: cubic-bezier(0.5, 2.1, 0.9, 0.9)
+    }
+
+    .ball-8 {
+        z-index: -8;
+        background-color: #C8102E;
+        animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9)
+    }
+</style>
+
+<body>
+    <div id='preloader'>
+        <div class='spinner'>
+            <span class='ball-1'></span>
+            <span class='ball-2'></span>
+            <span class='ball-3'></span>
+        
+          
+        </div>
+    </div>
+    <header>
+        <div class="header" id="top">
+            <div class="logo">
+                <a href="/"><img src="./css/img/logo.png" alt="logo"></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Search Here" onkeyup="search()" id="search-item">
+                <a href="#" class="	fa fa-search"></a>
+            </div>
+            <div class="icons">
+                <a href="./add_to_cart.html" class="fa fa-shopping-cart"></a>
+                <a href="./login" class="fa fa-user"></a>
+                <a href="#" class="fa fa-bars"></a>
+            </div>
+        </div>
+        <div class="links">
+            <a href="#category">Category</a>
+            <a href="./aboutus.html">About us</a>
+            <a href="./contact.html">Contact us</a>
+            <a href="./login">Login/sign-up</a>
+        </div>
+    </header>
+    <section style="background: beige;">
+        <!-- <div class="slideshow-container"> -->
+        <!-- <div class="mySlides fade" > -->
+        <img src="./css/img/A web app home page where we sell all types of artworks (1).png" style="width:100%  "></a>
+        
+        <!-- </div> -->
+        <!-- 
+            <div class="mySlides fade">
+
+                <a href="./add_to_cart.html"  > <img src="./css/img/pic2.jpg" style="width:100%"> </a>
+                <div class="text">Get your art now</div>
+
+            </div>
+
+            <div class="mySlides fade">
+
+                <a href="./add_to_cart.html"  > <img src="./css/img/arts/painting (3).png"
+                        style="width:100%"></a>
+                <div class="text">Explore New things</div>
+
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a> -->
+
+        </div>
+        <br>
+
+
+    </section>
+
+    <div class="container">
+        <!-- <section id="slide-sec">
+            <div id="slider--text">
+            </div>
+        </section> -->
+        <!-- <section id="arts">
+            <div class="scroll">
+                <ul>
+                    <li> <a href="./add_to_cart.html"> <img src="./css/img/pic1.jpg" alt=""></a> </li>
+                    <li> <a href="./add_to_cart.html"> <img src="./css/img/pic1.jpg" alt=""></a> </li>
+                    <li> <a href="./add_to_cart.html"> <img src="./css/img/pic1.jpg" alt=""></a> </li>
+                    <li> <a href="./add_to_cart.html"> <img src="./css/img/pic2.jpg" alt=""></a> </li>
+                    <li> <a href="./add_to_cart.html"> <img src="./css/img/pic2.jpg" alt=""></a> </li>
+                </ul>
+            </div>
+
+        </section> -->
+
+
+        <section id="category">
+            <div class="cate">
+                <button>Category</button>
+            </div>
+            <div class="Categorys">
+                <a href="#painting"> <button class="button"> Paintings</button></a>
+                <a href="#sketch"> <button class="button">Sketch-Drawings</button></a>
+                <a href="#sculp"> <button class="button"> Sculpture</button></a>
+                <a href="#digital"> <button class="button"> Digital Arts</button></a>
+            </div>
+        </section>
+        <hr>
+        <section id="cards">
+            <div class="contain_cards" id="contain_cards">
+                <div class="card-paint product" >
+                    <h3 id="painting" >Paintings</h3>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/paintings/1.jpg">
+                            <div class="info">
+                                <h1>Serenity</h1>
+                                <p>Tranquil scene capturing a solitary boat peacefully floating on a serene lake.</p>
+                                <button> <a href="./painting.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/paintings/2.jpg">
+                            <div class="info">
+                                <h1>Horizon</h1>
+                                <p>Captivating hues as the sun sets, casting a vibrant palette upon the calm sea.</p>
+                                <button> <a href="./painting.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/paintings/3.jpg">
+                            <div class="info">
+                                <h1>Junction</h1>
+                                <p>Vibrant depiction of a bustling train station with a departing train, evoking a sense
+                                    of anticipation and adventure.</p>
+                                <button> <a href="./painting.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/paintings/4.jpg">
+                            <div class="info">
+                                <h1>Enchant</h1>
+                                <p>Lush and vibrant garden, blooming with a kaleidoscope of colors, inviting
+                                    tranquility and wonder.</p>
+                                <button> <a href="./painting.html"  >More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="card-paint product" >
+                    <h3 id="sketch">Sketch-Drawings</h3>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/sketch/1.jpg">
+                            <div class="info">
+                                <h1>Reflection</h1>
+                                <p>Serene river flowing peacefully with a solitary boat resting by the bank, capturing
+                                    the beauty of stillness and introspection.</p>
+                                <button> <a href="./drawing.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/sketch/2.jpg">
+                            <div class="info">
+                                <h1>Grace</h1>
+                                <p>Delicate profile of a girl's face, showcasing elegance and gentle allure in a
+                                    captivating side views.</p>
+                                <button> <a href="./drawing.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/sketch/3.jpg">
+                            <div class="info">
+                                <h1>Whisper</h1>
+                                <p>Eerie sketch of a haunted hut standing by a misty river, evoking a haunting tale
+                                    shrouded in mystery and suspense.</p>
+                                <button> <a href="./drawing.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/sketch/4.jpg">
+                            <div class="info">
+                                <h1>Glimpse</h1>
+                                <p>Digital artwork portraying a stark, leafless tree against majestic mountains,
+                                    embodying a serene sense of isolation and grandeur.</p>
+                                <button> <a href="./drawing.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="card-paint product" >
+                    <h3 id="digital">Digital Arts</h3>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/Digital art/1.jpg">
+                            <div class="info">
+                                <h1>Solitude</h1>
+                                <p>Digital artwork portraying a stark, leafless tree against majestic mountains,
+                                    embodying a serene sense of isolation and grandeur.</p>
+                                <button> <a href="./Digital.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/Digital art/2.jpg">
+                            <div class="info">
+                                <h1>Silent Guardian</h1>
+                                <p>Digital artwork depicting a lone samurai immersed in nature's embrace, finding inner
+                                    peace amidst the silent depths of the forest.</p>
+                                <button> <a href="./Digital.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/Digital art/3.jpg">
+                            <div class="info">
+                                <h1>Desolation</h1>
+                                <p>Digital artwork capturing an urban landscape with deserted roads, evoking a
+                                    hauntingly empty cityscape immersed in stillness and solitude.</p>
+                                <button> <a href="./Digital.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/Digital art/4.jpg">
+                            <div class="info">
+                                <h1>Fragmented</h1>
+                                <p>Digital artwork illustrating a towering structure in disrepair, symbolizing the
+                                    beauty found within imperfection and the passage of time.</p>
+                                <button> <a href="./Digital.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="card-paint product" >
+                    <h3 id="sculp">Sculpture</h3>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/sculptures/1.png">
+                            <div class="info">
+                                <h1>Captivity</h1>
+                                <p>Sculpture depicting a man bound by chains, representing the struggle against
+                                    confinement and the pursuit of liberation.</p>
+                                <button> <a href="./sculp.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/sculptures/2.jpg">
+                            <div class="info">
+                                <h1>Harmony</h1>
+                                <p>Sculpture capturing the essence of two girls in a harmonious embrace, symbolizing
+                                    friendship, unity, and shared experiences.</p>
+                                <button> <a href="./sculp.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <div class="card">
+                            <img src="./css/img/arts/sculptures/3.jpg">
+                            <div class="info">
+                                <h1>Ascendance</h1>
+                                <p>Sculpture portraying a man with wings and a woman, representing the boundless spirit
+                                    of human aspirations and transcendent connection.</p>
+                                <button> <a href="./sculp.html"  > More</a></button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img src="./css/img/arts/sculptures/4.jpg">
+                            <div class="info">
+                                <h1>Elysium</h1>
+                                <p>Sculpture embodying the noble and timeless beauty of a Greek man, exuding strength,
+                                    grace, and classical elegance.</p>
+                                <button> <a href="./sculp.html"  > More</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="line">
+            <div class="slide-txt">
+                <h1>Our team of experts is dedicated to curating a collection of high-quality pieces that will bring
+                    beauty and inspiration to your life.</h1>
+
+            </div>
+        </section>
+        <button class="scrollToTopBtn 	fa fa-sort-up"></button>
+        <footer>
+            <div class="footer-section">
+                <div class="footer-item">
+
+                    <h2>Company</h2>
+                    <p><a href="../aboutus.html"> About Us</a></p>
+                    <p><a href=""> Contact Us</a></p>
+                    <p><a href=""> Privacy Policy</a></p>
+                </div>
+                <div class="footer-item">
+                    <h2>Get Help </h2>
+                    <p><a href=""> FAQ</a></p>
+                    <p><a href=""> Shipping </a></p>
+                    <p><a href=""> Retuns </a></p>
+                    <p><a href=""> Payment Options </a></p>
+                </div>
+                <div class="footer-item social">
+                    <h2> Follow Us </h2>
+                    <ul>
+                        <li><a href="https://www.instagram.com/artistome01/"  > <i
+                                    class="fa-brands fa-instagram"></i></a> </li>
+                        <li><a href="#"></a> <i class="fa-brands fa-linkedin-in"></i> </li>
+                        <li><a href="#"></a> <i class="fa-brands fa-youtube"></i> </li>
+                        <li><a href="#"></a> <i class="fa-brands fa-twitter"></i> </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="./index.js"></script>
+<script>
+    let loader = document.getElementById("preloader");
+    window.addEventListener("load", function () {
+        loader.style.display = "none";
+    }
+    )
+
+</script>
+
+</html>
