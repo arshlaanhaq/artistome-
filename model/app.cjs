@@ -10,9 +10,9 @@
     flash = require("connect-flash"),
     path = require('path');
 
-  const stripe = require('stripe')(process.env.stripe_api); // Initialize stripe with your API key
+  const stripe = require('stripe')(process.env.stripe_api); // Initialize stripe  API key
 
-  // const hostname = '192.168.32.115';
+  const hostname = '192.168.0.103';
   const port = 3000;
 
   // Create Express app
@@ -62,12 +62,12 @@
   });
 
 // Success route
-app.get("//success", (req, res) => {
+app.get("/success", (req, res) => {
   res.sendFile("success.html", { root: path.join(__dirname, '../public') });
 });
 
 // Cancel route
-app.get("//cancel", (req, res) => {
+app.get("/cancel", (req, res) => {
   res.sendFile("cancel.html", { root: path.join(__dirname, '../public') });
 });
 
@@ -183,11 +183,11 @@ app.get("//cancel", (req, res) => {
   });
   
   // Start the server
-  app.listen(port, () => {
-    console.log("Server Has Started!");
-  });
-
-
-  // app.listen(port, hostname, () => {
-  //   console.log(`The application started successfully on http://${hostname}:${port}/`);
+  // app.listen(port, () => {
+  //   console.log("Server Has Started!");
   // });
+
+
+  app.listen(port, hostname, () => {
+    console.log(`The application started successfully on http://${hostname}:${port}/`);
+  });

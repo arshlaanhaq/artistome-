@@ -661,8 +661,8 @@ a {
 @media only screen and (max-width:600px) {
     .header {
         grid-template-columns: auto auto;
-        padding: 10px 5px;
-        height: auto;
+            padding: 10px 5px;
+            height: auto;
     }
 
     .search {

@@ -104,66 +104,79 @@
         background-color: #C8102E;
         animation-timing-function: cubic-bezier(0.5, 2.4, 0.9, 0.9)
     }
-    .icons{
+
+    .icons {
         display: flex;
-    text-align: right;
-    position: absolute;
-    right: 0;
-    top: 29px;
-}
-    
+        text-align: right;
+        position: absolute;
+        right: 0;
+        top: 29px;
+    }
+
 
     ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  font-size: 20px;
-  /* background-color: #333; */
-}
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-size: 20px;
+        /* background-color: #333; */
+    }
 
-li {
-  float: left;
-}
+    li {
+        float: left;
+    }
 
-li a, .dropbtn {
-    display: inline-block;
-    color: #0b0a0a;
-    text-align: center;
-    padding: 1px 16px;
-    text-decoration: none;
-}
-/* 
+    li a,
+    .dropbtn {
+        display: inline-block;
+        color: #0b0a0a;
+        text-align: center;
+        padding: 1px 16px;
+        text-decoration: none;
+    }
+
+    /* 
 li a:hover, .dropdown:hover .dropbtn {
   background-color: #f46d13; 
 } */
 
-li.dropdown {
-  display: inline-block;
-}
+    li.dropdown {
+        display: inline-block;
+    }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    /* background-color: #f9f9f9; */
-    min-width: 120px;
-    box-shadow: 0px 4px 18px 0px rgb(180 41 41);
-    z-index: 1;
-}
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        /* background-color: #f9f9f9; */
+        min-width: 120px;
+        box-shadow: 0px 4px 18px 0px rgb(180 41 41);
+        z-index: 1;
+    }
 
-.dropdown-content a {
-  color: red;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
+    .dropdown-content a {
+        color: red;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
 
-.dropdown-content a:hover {background-color: beige;}
+    .dropdown-content a:hover {
+        background-color: beige;
+    }
 
-.dropdown:hover .dropdown-content {
-  display: block;
-}
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    @media screen and (max-width: 600px) {
+        .icons {
+            top: 11.5px;
+
+        }
+
+    }
 </style>
 
 <body>
@@ -186,7 +199,7 @@ li.dropdown {
             </div>
 
             <div class="icons">
-                <a href="./add_to_cart.html"   class="fa fa-shopping-cart"></a>
+                <a href="./add_to_cart.html" class="fa fa-shopping-cart"></a>
                 <ul>
                     <li class="dropdown">
                         <a href="javascript:void(0)" class="dropbtn"><i class="fa fa-sign-out"></i></i></a>
@@ -239,7 +252,7 @@ li.dropdown {
             <div id="slider--text">
             </div>
         </section> -->
-          <section id="arts">
+        <section id="arts">
             <div class="scroll">
                 <ul>
                     <li> <a href="./add_to_cart.html"> <img src="./css/img/pic1.jpg" alt=""></a> </li>
@@ -267,15 +280,15 @@ li.dropdown {
         <hr>
         <section id="cards">
             <div class="contain_cards" id="contain_cards">
-                <div class="card-paint product" >
-                    <h3 id="painting" >Paintings</h3>
+                <div class="card-paint product">
+                    <h3 id="painting">Paintings</h3>
                     <div class="wrapper">
                         <div class="card">
                             <img src="./css/img/arts/paintings/1.jpg">
                             <div class="info">
                                 <h1>Serenity</h1>
                                 <p>Tranquil scene capturing a solitary boat peacefully floating on a serene lake.</p>
-                                <button> <a href="./painting.html"  > More</a></button>
+                                <button> <a href="./painting.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -283,7 +296,7 @@ li.dropdown {
                             <div class="info">
                                 <h1>Horizon</h1>
                                 <p>Captivating hues as the sun sets, casting a vibrant palette upon the calm sea.</p>
-                                <button> <a href="./painting.html"  > More</a></button>
+                                <button> <a href="./painting.html"> More</a></button>
                             </div>
                         </div>
                     </div>
@@ -294,7 +307,7 @@ li.dropdown {
                                 <h1>Junction</h1>
                                 <p>Vibrant depiction of a bustling train station with a departing train, evoking a sense
                                     of anticipation and adventure.</p>
-                                <button> <a href="./painting.html"  > More</a></button>
+                                <button> <a href="./painting.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -303,13 +316,13 @@ li.dropdown {
                                 <h1>Enchant</h1>
                                 <p>Lush and vibrant garden, blooming with a kaleidoscope of colors, inviting
                                     tranquility and wonder.</p>
-                                <button> <a href="./painting.html"  >More</a></button>
+                                <button> <a href="./painting.html">More</a></button>
                             </div>
                         </div>
                     </div>
                     <hr>
                 </div>
-                <div class="card-paint product" >
+                <div class="card-paint product">
                     <h3 id="sketch">Sketch-Drawings</h3>
                     <div class="wrapper">
                         <div class="card">
@@ -318,7 +331,7 @@ li.dropdown {
                                 <h1>Reflection</h1>
                                 <p>Serene river flowing peacefully with a solitary boat resting by the bank, capturing
                                     the beauty of stillness and introspection.</p>
-                                <button> <a href="./drawing.html"  > More</a></button>
+                                <button> <a href="./drawing.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -327,7 +340,7 @@ li.dropdown {
                                 <h1>Grace</h1>
                                 <p>Delicate profile of a girl's face, showcasing elegance and gentle allure in a
                                     captivating side views.</p>
-                                <button> <a href="./drawing.html"  > More</a></button>
+                                <button> <a href="./drawing.html"> More</a></button>
                             </div>
                         </div>
                     </div>
@@ -338,7 +351,7 @@ li.dropdown {
                                 <h1>Whisper</h1>
                                 <p>Eerie sketch of a haunted hut standing by a misty river, evoking a haunting tale
                                     shrouded in mystery and suspense.</p>
-                                <button> <a href="./drawing.html"  > More</a></button>
+                                <button> <a href="./drawing.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -347,13 +360,13 @@ li.dropdown {
                                 <h1>Glimpse</h1>
                                 <p>Digital artwork portraying a stark, leafless tree against majestic mountains,
                                     embodying a serene sense of isolation and grandeur.</p>
-                                <button> <a href="./drawing.html"  > More</a></button>
+                                <button> <a href="./drawing.html"> More</a></button>
                             </div>
                         </div>
                     </div>
                     <hr>
                 </div>
-                <div class="card-paint product" >
+                <div class="card-paint product">
                     <h3 id="digital">Digital Arts</h3>
                     <div class="wrapper">
                         <div class="card">
@@ -362,7 +375,7 @@ li.dropdown {
                                 <h1>Solitude</h1>
                                 <p>Digital artwork portraying a stark, leafless tree against majestic mountains,
                                     embodying a serene sense of isolation and grandeur.</p>
-                                <button> <a href="./Digital.html"  > More</a></button>
+                                <button> <a href="./Digital.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -371,7 +384,7 @@ li.dropdown {
                                 <h1>Silent Guardian</h1>
                                 <p>Digital artwork depicting a lone samurai immersed in nature's embrace, finding inner
                                     peace amidst the silent depths of the forest.</p>
-                                <button> <a href="./Digital.html"  > More</a></button>
+                                <button> <a href="./Digital.html"> More</a></button>
                             </div>
                         </div>
                     </div>
@@ -382,7 +395,7 @@ li.dropdown {
                                 <h1>Desolation</h1>
                                 <p>Digital artwork capturing an urban landscape with deserted roads, evoking a
                                     hauntingly empty cityscape immersed in stillness and solitude.</p>
-                                <button> <a href="./Digital.html"  > More</a></button>
+                                <button> <a href="./Digital.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -391,13 +404,13 @@ li.dropdown {
                                 <h1>Fragmented</h1>
                                 <p>Digital artwork illustrating a towering structure in disrepair, symbolizing the
                                     beauty found within imperfection and the passage of time.</p>
-                                <button> <a href="./Digital.html"  > More</a></button>
+                                <button> <a href="./Digital.html"> More</a></button>
                             </div>
                         </div>
                     </div>
                     <hr>
                 </div>
-                <div class="card-paint product" >
+                <div class="card-paint product">
                     <h3 id="sculp">Sculpture</h3>
                     <div class="wrapper">
                         <div class="card">
@@ -406,7 +419,7 @@ li.dropdown {
                                 <h1>Captivity</h1>
                                 <p>Sculpture depicting a man bound by chains, representing the struggle against
                                     confinement and the pursuit of liberation.</p>
-                                <button> <a href="./sculp.html"  > More</a></button>
+                                <button> <a href="./sculp.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -415,7 +428,7 @@ li.dropdown {
                                 <h1>Harmony</h1>
                                 <p>Sculpture capturing the essence of two girls in a harmonious embrace, symbolizing
                                     friendship, unity, and shared experiences.</p>
-                                <button> <a href="./sculp.html"  > More</a></button>
+                                <button> <a href="./sculp.html"> More</a></button>
                             </div>
                         </div>
                     </div>
@@ -426,7 +439,7 @@ li.dropdown {
                                 <h1>Ascendance</h1>
                                 <p>Sculpture portraying a man with wings and a woman, representing the boundless spirit
                                     of human aspirations and transcendent connection.</p>
-                                <button> <a href="./sculp.html"  > More</a></button>
+                                <button> <a href="./sculp.html"> More</a></button>
                             </div>
                         </div>
                         <div class="card">
@@ -435,7 +448,7 @@ li.dropdown {
                                 <h1>Elysium</h1>
                                 <p>Sculpture embodying the noble and timeless beauty of a Greek man, exuding strength,
                                     grace, and classical elegance.</p>
-                                <button> <a href="./sculp.html"  > More</a></button>
+                                <button> <a href="./sculp.html"> More</a></button>
                             </div>
                         </div>
                     </div>
@@ -443,15 +456,12 @@ li.dropdown {
             </div>
 
 
-        </section
+        </section <section class="line">
+        <div class="slide-txt">
+            <h1>Our team of experts is dedicated to curating a collection of high-quality pieces that will bring
+                beauty and inspiration to your life.</h1>
 
-
-        <section class="line">
-            <div class="slide-txt">
-                <h1>Our team of experts is dedicated to curating a collection of high-quality pieces that will bring
-                    beauty and inspiration to your life.</h1>
-
-            </div>
+        </div>
         </section>
         <button class="scrollToTopBtn 	fa fa-sort-up"></button>
         <footer>
@@ -473,8 +483,8 @@ li.dropdown {
                 <div class="footer-item social">
                     <h2> Follow Us </h2>
                     <ul>
-                        <li><a href="https://www.instagram.com/artistome01/"  > <i
-                                    class="fa-brands fa-instagram"></i></a> </li>
+                        <li><a href="https://www.instagram.com/artistome01/"> <i class="fa-brands fa-instagram"></i></a>
+                        </li>
                         <li><a href="#"></a> <i class="fa-brands fa-linkedin-in"></i> </li>
                         <li><a href="#"></a> <i class="fa-brands fa-youtube"></i> </li>
                         <li><a href="#"></a> <i class="fa-brands fa-twitter"></i> </li>
@@ -486,7 +496,7 @@ li.dropdown {
 </body>
 <script src="./index.js"></script>
 <script>
- 
+
 
     let loader = document.getElementById("preloader");
     window.addEventListener("load", function () {

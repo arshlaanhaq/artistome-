@@ -182,7 +182,7 @@ function loadCartItems() {
     updateCartIcon();
 }
 
-// Quantity In Cart Icon
+// Quantity In Cart Icon    
 function updateCartIcon() {
     var cartBoxes = document.getElementsByClassName("cart-box");
     var quantity = 0;
