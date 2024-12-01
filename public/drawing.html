@@ -17,16 +17,17 @@
     /* ----- Variables ----- */
     /* ----- Global ----- */
     * {
-    transition: all 0.3s ease-in-out;
-}
+        transition: all 0.3s ease-in-out;
+    }
+
     html,
     body {
         height: 100%;
-        behavior: smooth;
+        scroll-behavior: smooth;
     }
 
     body {
-        display: grid;
+        /* display: grid; */
         grid-template-rows: 1fr;
         font-family: "Raleway", sans-serif;
         background-color: beige;
@@ -44,6 +45,7 @@
     }
 
     .containers {
+
         display: flex;
         flex-wrap: wrap;
     }
@@ -251,6 +253,7 @@
 
     .buttons {
         display: flex;
+
         justify-content: center;
         align-items: center;
 
@@ -277,110 +280,75 @@
 
 
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    body {
-        display: block;
-    }
+    /* Responsive Design */
+    @media only screen and (max-width: 700px) {
+        body {
+            display: block;
+            /* width: 94vh; */
+        }
 
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-    }
+        .logo img {
+            width: 150px;
+            /* Adjust logo size for smaller screens */
+        }
 
-    .logo img {
-        width: 150px; /* Adjust logo size for smaller screens */
-    }
+        .icons {
+            /* display: flex; */
+            /* position: relative; */
+            gap: 10px;
+        }
 
-    .icons {
-        display: flex;
-        gap: 10px;
-    }
 
-    .links {
-        display: none; /* Hide links by default */
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-        background-color: wheat;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        opacity: 0;
-        visibility: hidden;
-    }
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            align-items: center;
+            position: relative;
+        }
 
-    .links.showlinks {
-        display: flex; /* Show links when the toggle is clicked */
-        opacity: 1;
-        visibility: visible;
-    }
+        .buttons button {
+            width: 44vw;
+            margin: 11px;
+        }
 
-    .buttons {
-        align-items: center;
-        position: relative;
-        left: 2svh;
-        
-    }
+        .containers {
+            flex-direction: column;
+            align-items: center;
+        }
 
-    .buttons button {
-        display: flex;
-        justify-content: center;
-        width: 80%; /* Full-width buttons for smaller screens */
-        margin: 10px ;
-    }
+        .product {
+            position: relative;
+            width: 46vh;
+            margin: 30px 0;
+        }
 
-    .containers {
-        flex-direction: column;
-        align-items: center;
-    }
+        .product__photo {
+            left: 20px;
+        }
 
-    .product {
-        /* grid-template-columns: 1fr; 
-        width: 90%;
-        margin: 20px 0; */
-    }
+        .photo-main img {
 
-    .photo-main img {
-        left: 0; /* Center the image */
-        width: 100%;
-        height: auto; /* Maintain aspect ratio */
-    }
+            width: 100%;
+            height: auto;
+            /* Maintain aspect ratio */
+        }
 
-    .product__info {
-        text-align: center; /* Center-align product information */
-    }
+        .box3 .photo-main img {
+            top: 4em;
+        }
 
-    footer {
-        display: block;
-        padding: 1rem;
-        text-align: center;
-    }
+        .box4 .photo-main img {
+            top: 4em;
+        }
 
-    .footer-section {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
+        .product__info {
+            text-align: center;
+            /* Center-align product information */
+        }
 
-    .footer-item {
-        margin-bottom: 1rem;
-    }
 
-    .footer-item.social ul {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
     }
-
-    .footer-item.social ul li a {
-        font-size: 1.5rem;
-    }
-}
-
 </style>
 
 <body>
@@ -435,7 +403,7 @@
                         <h3>Description</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis sequi non in!</p>
                     </div>
-                     <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a> 
+                    <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a>
                 </div>
             </div>
             <div class="box2 product">
@@ -462,7 +430,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem hic
                             excepturi?</p>
                     </div>
-                     <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a> 
+                    <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a>
                 </div>
             </div>
             <div class="box3 product">
@@ -489,7 +457,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem hic
                             excepturi?</p>
                     </div>
-                     <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a> 
+                    <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a>
                 </div>
             </div>
             <div class="box4 product">
@@ -516,7 +484,7 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque exercitationem hic
                             excepturi?</p>
                     </div>
-                     <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a> 
+                    <a href="./add_to_cart.html"><button class="buy--btn">ADD TO CART</button></a>
                 </div>
             </div>
 

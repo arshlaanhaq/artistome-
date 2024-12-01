@@ -12,7 +12,7 @@
 
   const stripe = require('stripe')(process.env.stripe_api); // Initialize stripe  API key
 
-  const hostname = '192.168.0.103';
+  const hostname = '192.168.230.115';
   const port = 3000;
 
   // Create Express app

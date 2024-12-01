@@ -22,8 +22,7 @@ html {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     padding: 0 25px;
-   
-    height: 80px;
+       height: 80px;
 }
 
 .logo {
