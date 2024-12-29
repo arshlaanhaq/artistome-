@@ -99,7 +99,7 @@ html {
 }
 
 .showlinks {
-    height: 30vh;
+    height: 20vh;
 
 }
 
@@ -199,7 +199,8 @@ html {
 
 /* section 1 */
 #slide-sec {
-    height: 30vh;
+    height: 40vh;
+    perspective: 100px;
 
     /* background-color: aquamarine; */
 }
@@ -220,6 +221,9 @@ html {
     justify-content: center;
     align-items: center;
     height: 100%;
+    background: linear-gradient(to bottom, #d54b25 0%, #32575d 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .fade-in {
@@ -229,22 +233,19 @@ html {
 @keyframes move {
     0% {
         opacity: 0;
-        transform: rotate3d(2, 0, 48deg);
+        transform: rotate3d(2, 2, 0, 48deg);
     }
-
     20% {
         opacity: 1;
-        transform: rotate3d(0, 0, 24deg);
+        transform: rotate3d(0, 0, 0, 24deg);
     }
-
     80% {
         opacity: 1;
-        transform: rotate3d(0, 0, 24deg);
+        transform: rotate3d(0, 0, 0, 24deg);
     }
-
     100% {
         opacity: 0;
-        transform: rotate3d(-2, 0, 48deg);
+        transform: rotate3d(-2, -2, 0, 48deg);
     }
 }
 
@@ -374,7 +375,15 @@ hr {
     }
 }
 
-
+/* //h3 headind */
+h3{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    background: linear-gradient(to bottom, #d54b25 0%, #32575d 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
 
 /* cards_section */
 
@@ -385,7 +394,7 @@ hr {
 }
 
 .card {
-    width: 25vw;
+    width: 18.5vw;
     height: 180px;
     border-radius: 15px;
     padding: 1.5rem;
@@ -686,8 +695,8 @@ a {
     }
 
     .card {
-        width: 62vw;
-        height: 23vh;
+        width: 55vw;
+        height: 20vh;
     }
 
     .card .info {

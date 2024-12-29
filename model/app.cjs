@@ -10,9 +10,9 @@
     flash = require("connect-flash"),
     path = require('path');
 
-  const stripe = require('stripe')(process.env.stripe_api); // Initialize stripe  API key
+  const stripe = require('stripe')(process.env.stripe_api); 
 
-  const hostname = '192.168.230.115';
+  const hostname = '192.168.34.115';
   const port = 3000;
 
   // Create Express app
@@ -32,7 +32,7 @@
   app.set("view engine", "ejs");
   app.set('views', path.join(__dirname, '../views'));
   app.use(bodyParser.urlencoded({ extended: true }));
-  app.use(bodyParser.json()); // Add this to parse JSON bodies
+  app.use(bodyParser.json()); 
 
   // Session and flash messages setup
   app.use(require("express-session")({
@@ -71,13 +71,13 @@ app.get("/cancel", (req, res) => {
   res.sendFile("cancel.html", { root: path.join(__dirname, '../public') });
 });
 
-  app.get("/secret", isLoggedIn, (req, res) => {
-    res.render("secret");
-  });
+  // app.get("/secret", isLoggedIn, (req, res) => {
+  //   res.render("secret");
+  // });
 
-  app.get("/register", (req, res) => {
-    res.render("register");
-  });
+  // app.get("/register", (req, res) => {
+  //   res.render("register");
+  // });
 
   app.post("/register", async (req, res) => {
     try {
@@ -150,7 +150,7 @@ app.get("/cancel", (req, res) => {
             currency: "inr",
             product_data: {
               name: item.title,
-              images: [item.productImg], // Ensure this is a full URL
+              images: [item.productImg], 
             },
             unit_amount: unitAmount,
           },
@@ -183,11 +183,11 @@ app.get("/cancel", (req, res) => {
   });
   
   // Start the server
-  // app.listen(port, () => {
-  //   console.log("Server Has Started!");
-  // });
-
-
-  app.listen(port, hostname, () => {
-    console.log(`The application started successfully on http://${hostname}:${port}/`);
+  app.listen(port, () => {
+    console.log("Server Has Started!");
   });
+
+
+  // app.listen(port, hostname, () => {
+  //   console.log(`The application started successfully on http://${hostname}:${port}/`);
+  // });

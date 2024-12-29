@@ -59,26 +59,27 @@ const search = () => {
   // }
 
   // // ****************************************slider2**************************************
-  // if (document.getElementById("slider--text")) {
+  if (document.getElementById("slider--text")) {
 
-  //   let slides = [
-  //     "<h2>Amazing arts that will amaze your mind.<small>Home of Arts</small></h2>",
+    let slides = [
+      "<h2>Amazing arts that will amaze your mind.<small>Home of Arts</small></h2>",
+      "<h2>Art that whispers to the soul and roars to the mind.</h2>"
 
 
-  //   ];
+    ];
 
-  //   let i = 0;
+    let i = 0;
 
-  //   const slider = () => {
-  //     document.getElementById("slider--text").innerHTML = slides[i];
-  //     document.getElementById("slider--text").classList.add('fade-in');
+    const slider = () => {
+      document.getElementById("slider--text").innerHTML = slides[i];
+      document.getElementById("slider--text").classList.add('fade-in');
 
-  //     (i < slides.length - 1) ? i++ : i = 0;
-  //   };
+      (i < slides.length - 1) ? i++ : i = 0;
+    };
 
-  //   slider(); // Start slider immediately
-  //   setInterval(slider, 4000); // Slide every 4 seconds
-  // }
+    slider(); // Start slider immediately
+    setInterval(slider, 4000); // Slide every 4 seconds
+  }
   // ****************************************scrollTotop****************************************************************************
   var target = document.querySelector("footer");
   var scrollToTopBtn = document.querySelector(".scrollToTopBtn");
