@@ -136,7 +136,6 @@ function updatetotal() {
     document.getElementsByClassName('total-price')[0].innerText = "₹" + total;
     // save total proce to localstorage
     localStorage.setItem("cartTotal", total);
-
 }
 
 // Keep Item in cart when page refresh with localstorage

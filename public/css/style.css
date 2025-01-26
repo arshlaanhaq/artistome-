@@ -589,7 +589,7 @@ h3{
 .footer-section h2::after {
     content: '';
     width: 4rem;
-    height: .2rem;
+    height: .2rem;  
     background: #e65b00;
     position: absolute;
     top: 2.5rem;

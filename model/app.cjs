@@ -1,5 +1,5 @@
   // Required modules
-  require('dotenv').config(); // Load environment variables from .env file
+  require('dotenv').config(); 
   const express = require("express"),
     mongoose = require("mongoose"),
     passport = require("passport"),
@@ -13,14 +13,14 @@
   const stripe = require('stripe')(process.env.stripe_api); 
 
   const hostname = '192.168.34.115';
-  const port = 3000;
+  const port = process.env.PORT || 3000;
 
   // Create Express app
   const app = express();
   app.use(express.static(path.join(__dirname, '../public')));
 
   // MongoDB connection
-  mongoose.connect("mongodb://127.0.0.1:27017/Data", {})
+  mongoose.connect(process.env.MONGO_URL, {})
     .then(() => {
       console.log("Connected to MongoDB");
     })
